@@ -90,14 +90,14 @@ window.function = function (html, fileName, format, zoom, orientation, margin, b
 	  justify-content: center;
 	  align-items: center;
 	  height: 100vh;
-	  background-color: #f0f0f0;
+	  background-color: #ffffff;
 	}
   
 	button#download {
-	  border-radius: 0.5rem !important;
-	  font-size: 16px !important;
-    	  font-weight: 600;
-          line-height: 1.4;
+	  border-radius: 0.5rem;
+	  font-size: 16px;
+	  font-weight: 600;
+	  line-height: 1.4;
 	  color: #000000;
 	  border: none;
 	  padding: 8px 16px;
