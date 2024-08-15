@@ -94,18 +94,15 @@ window.function = function (html, fileName, format, zoom, orientation, margin, b
 	}
   
 	button#download {
-	  border-radius: 0.5rem;
-	  font-size: 16px;
+	  border-radius: 0.5rem !important;
+	  font-size: 16px !important;
     	  font-weight: 600;
           line-height: 1.4;
-	  font-weight: 600;
-	  line-height: 1.5rem;
-	  color: #0d0d0d;
+	  color: #000000;
 	  border: none;
           border-radius: 0.5rem;
-	  font-family: 'Inter, -apple-system, "system-ui", Roboto, sans-serif';
 	  padding: 8px 16px;
-	  height: 32px;
+	  height: 40px;
 	  background: #ffffff;
 	  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.08), 0 1px 2.5px rgba(0, 0, 0, 0.1);
 	  cursor: pointer;
