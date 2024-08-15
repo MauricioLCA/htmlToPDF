@@ -150,7 +150,7 @@ window.function = function (html, fileName, format, zoom, orientation, margin, b
 		  hotfixes: ['px_scaling']
 		}
 		};
-		html2pdf().from('${html}').toPdf().get('pdf').then(function(pdf) {
+		html2pdf().from(html).toPdf().get('pdf').then(function(pdf) {
 		button.innerText = 'Done 🎉';
 		button.className = 'done';
 		setTimeout(function() { 
