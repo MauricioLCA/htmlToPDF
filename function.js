@@ -103,7 +103,7 @@ window.function = function (html, fileName, format, zoom, orientation, margin, b
 	  color: #0d0d0d;
 	  border: none;
           border-radius: 0.5rem;
-	  font-family: 'Inter';
+	  font-family: 'Inter, -apple-system, "system-ui", Roboto, sans-serif';
 	  padding: 8px 16px;
 	  height: 32px;
 	  background: #ffffff;
