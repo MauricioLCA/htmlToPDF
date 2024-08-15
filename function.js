@@ -90,7 +90,7 @@ window.function = function (html, fileName, format, zoom, orientation, margin, b
 	  justify-content: center;
 	  align-items: center;
 	  height: 100vh;
-	  background-color: #ffffff !important;
+	  background-color: #f0f0f0;
 	}
   
 	button#download {
@@ -100,7 +100,6 @@ window.function = function (html, fileName, format, zoom, orientation, margin, b
           line-height: 1.4;
 	  color: #000000;
 	  border: none;
-          border-radius: 0.5rem;
 	  padding: 8px 16px;
 	  height: 40px;
 	  background: #ffffff;
@@ -150,7 +149,7 @@ window.function = function (html, fileName, format, zoom, orientation, margin, b
 		  hotfixes: ['px_scaling']
 		}
 		};
-		html2pdf().from(html).toPdf().get('pdf').then(function(pdf) {
+		html2pdf().from('${html}').toPdf().get('pdf').then(function(pdf) {
 		button.innerText = 'Done 🎉';
 		button.className = 'done';
 		setTimeout(function() { 
