@@ -90,18 +90,21 @@ window.function = function (html, fileName, format, zoom, orientation, margin, b
 	  justify-content: center;
 	  align-items: center;
 	  height: 100vh;
-	  background-color: #f0f0f0;
+	  background-color: #ffffff;
 	}
   
 	button#download {
 	  border-radius: 0.5rem;
-	  font-size: 14px;
+	  font-size: 16px;
+    	  font-weight: 600;
+          line-height: 1.4;
 	  font-weight: 600;
 	  line-height: 1.5rem;
 	  color: #0d0d0d;
 	  border: none;
+          border-radius: 0.5rem;
 	  font-family: 'Inter';
-	  padding: 0px 12px;
+	  padding: 8px 16px;
 	  height: 32px;
 	  background: #ffffff;
 	  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.08), 0 1px 2.5px rgba(0, 0, 0, 0.1);
