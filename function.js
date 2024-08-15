@@ -85,11 +85,15 @@ window.function = function (html, fileName, format, zoom, orientation, margin, b
 
 	const customCSS = `
 	body {
-	  margin: 0!important
+	  margin: 0!important;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  height: 100vh;
+	  background-color: #f0f0f0;
 	}
   
 	button#download {
-	  position: fixed;
 	  border-radius: 0.5rem;
 	  font-size: 14px;
 	  font-weight: 600;
@@ -100,8 +104,6 @@ window.function = function (html, fileName, format, zoom, orientation, margin, b
 	  padding: 0px 12px;
 	  height: 32px;
 	  background: #ffffff;
-	  top: 8px;
-	  right: 8px;
 	  box-shadow: 0 0 0 0.5px rgba(0, 0, 0, 0.08), 0 1px 2.5px rgba(0, 0, 0, 0.1);
 	  cursor: pointer;
 	}
@@ -118,16 +120,6 @@ window.function = function (html, fileName, format, zoom, orientation, margin, b
 	button#download.done {
 	  color: #16a34a;
 	}
-  
-	::-webkit-scrollbar {
-	  width: 5px;
-	  background-color: rgb(0 0 0 / 8%);
-	}
-  
-	::-webkit-scrollbar-thumb {
-	  background-color: rgb(0 0 0 / 32%);
-	  border-radius: 4px;
-	}
 	`;
 
 	// HTML THAT IS RETURNED AS A RENDERABLE URL
@@ -135,14 +127,10 @@ window.function = function (html, fileName, format, zoom, orientation, margin, b
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 	  <style>${customCSS}</style>
 	  <div class="main">
-	  <div class="header">
-		<button class="button" id="download">Download</button>
-	  </div>
-	  <div id="content">${html}</div>
+		<button class="button" id="download">Download PDF</button>
 	  </div>
 	  <script>
 	  document.getElementById('download').addEventListener('click', function() {
-		var element = document.getElementById('content');
 		var button = this;
 		button.innerText = 'Downloading...';
 		button.className = 'downloading';
@@ -162,11 +150,11 @@ window.function = function (html, fileName, format, zoom, orientation, margin, b
 		  hotfixes: ['px_scaling']
 		}
 		};
-		html2pdf().set(opt).from(element).toPdf().get('pdf').then(function(pdf) {
+		html2pdf().from('${html}').toPdf().get('pdf').then(function(pdf) {
 		button.innerText = 'Done 🎉';
 		button.className = 'done';
 		setTimeout(function() { 
-		  button.innerText = 'Download';
+		  button.innerText = 'Download PDF';
 		  button.className = ''; 
 		}, 2000);
 		}).save();
