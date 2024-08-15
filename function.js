@@ -90,7 +90,7 @@ window.function = function (html, fileName, format, zoom, orientation, margin, b
 	  justify-content: center;
 	  align-items: center;
 	  height: 100vh;
-	  background-color: #ffffff;
+	  background-color: #ffffff !important;
 	}
   
 	button#download {
